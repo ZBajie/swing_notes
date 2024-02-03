@@ -1,0 +1,66 @@
+#notes {
+  background-color: $background-color-secondary;
+  padding: $padding-primary;
+
+  header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h2 {
+      font-family: $font-cursive;
+    }
+    form {
+      div:last-child {
+        display: flex;
+        justify-content: center;
+        button {
+          @include button-primary;
+        }
+      }
+    }
+  }
+  section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    article {
+      width: 420px;
+      min-height: 250px;
+      background-color: $background-color-primary;
+
+      padding: $padding-primary;
+      margin: $margin-primary;
+      border: 2px dotted $border-color-primary;
+      border-radius: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      div {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        button {
+          @include button-primary;
+          background-color: $background-color-button-secondary;
+          border-color: $border-color-secondary;
+        }
+      }
+      footer {
+        width: 50%;
+
+        background-color: $background-color-secondary;
+        padding: $padding-primary;
+        border: 2px dotted $border-color-tertiary;
+
+        border-radius: 20% 30% 70% 40%;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+      }
+    }
+  }
+}

@@ -1,0 +1,12 @@
+@mixin button-primary {
+  padding: $padding-primary;
+  margin: $margin-primary;
+  border-radius: 50%;
+  background-color: $background-color-button-primary;
+  border: 2px dotted $border-color-primary;
+
+  &:hover {
+    cursor: pointer;
+    opacity: 70%;
+  }
+}

@@ -1,15 +1,15 @@
 export default function Header() {
   return (
     <>
-      <header>
+      <header id="header-primary">
         <h1>Swing notes</h1>
         <nav>
           <ul>
             <li>
-              <a href="/">Hem</a>
+              <a href="/">Notiser</a>
             </li>
             <li>
-              <a href="/newnote">Ny notering</a>
+              <a href="/newnote">Ny notis</a>
             </li>
           </ul>
         </nav>

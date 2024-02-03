@@ -1,0 +1,32 @@
+#header-primary {
+  background-color: $background-color-secondary;
+  padding: $padding-primary;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  h1 {
+    font-family: $font-cursive;
+    font-size: $font-size-h1;
+  }
+  nav {
+    display: flex;
+    align-items: center;
+
+    ul {
+      list-style: none;
+      display: flex;
+      li {
+        a {
+          text-decoration: none;
+          white-space: nowrap;
+          color: $color-primary;
+          background-color: $background-color-button-primary;
+          padding: $padding-primary;
+          margin: $margin-primary;
+          border: 2px dotted $border-color-primary;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+}

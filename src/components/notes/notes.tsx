@@ -68,35 +68,44 @@ const Notes: React.FC = () => {
 
   return (
     <main id="notes">
-      <h1>Notiser</h1>
-      <form onSubmit={onSubmit}>
-        <div>
-          <label htmlFor="name">Namn</label>
-          <input
-            type="text"
-            id="name"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-          />
-        </div>
-        <div>
-          <button onClick={onSubmit}>Sök notiser</button>
-        </div>
-      </form>
+      <header>
+        <h2>Notiser</h2>
+        <form onSubmit={onSubmit}>
+          <div>
+            <label htmlFor="name"></label>
+            <input
+              type="text"
+              id="name"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              placeholder="Namn"
+            />
+          </div>
+          <div>
+            <button onClick={onSubmit}>Sök notiser</button>
+          </div>
+        </form>
+      </header>
       <section>
         {response.map((item) => (
-          <div key={item.id}>
-            <h2>{item.title}</h2>
-            <p>{item.note}</p>
-            <p>Created by: {item.username}</p>
-            <p>Created at: {item.createdAt}</p>
-            <button onClick={() => editLink(item.id, item.note, item.username)}>
-              Editera
-            </button>
-            <button onClick={() => deleteNote(item.id, item.username)}>
-              Radera notis
-            </button>
-          </div>
+          <article key={item.id}>
+            <h3>{item.title}</h3>
+            <div>
+              <button
+                onClick={() => editLink(item.id, item.note, item.username)}
+              >
+                Editera
+              </button>
+              <p>{item.note}</p>
+              <button onClick={() => deleteNote(item.id, item.username)}>
+                Radera
+              </button>
+            </div>
+            <footer>
+              <p>{item.username}</p>
+              <p>{item.createdAt}</p>
+            </footer>
+          </article>
         ))}
       </section>
     </main>
