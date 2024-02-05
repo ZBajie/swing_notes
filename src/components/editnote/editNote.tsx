@@ -36,21 +36,26 @@ export default function EditNote() {
   }
   return (
     <main id="edit-note">
-      <h1>Editera note</h1>
-      <form onSubmit={onSubmit}>
-        <div>
-          <label htmlFor="note">Text</label>
-          <textarea
-            id="note"
-            value={note}
-            onChange={(e) => setNote(e.target.value)}
-          />
-        </div>
+      <section>
+        <article>
+          <h2>Ändra notis</h2>
+          <form onSubmit={onSubmit}>
+            <div>
+              <label htmlFor="note">Text</label>
+              <textarea
+                id="note"
+                rows={6}
+                value={note}
+                onChange={(e) => setNote(e.target.value)}
+              />
+            </div>
 
-        <div>
-          <button onClick={onSubmit}>Edit</button>
-        </div>
-      </form>
+            <div>
+              <button onClick={onSubmit}>Ändra</button>
+            </div>
+          </form>
+        </article>
+      </section>
     </main>
   )
 }

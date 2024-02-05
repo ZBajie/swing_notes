@@ -10,6 +10,7 @@ export default function NewNotes() {
     if (title.length < 5) {
       alert("Titeln måste vara minst 5 bokstäver lång.")
     }
+
     if (note.length < 5) {
       alert("Notisen måste vara minst 5 bokstäver lång.")
     }
@@ -48,6 +49,7 @@ export default function NewNotes() {
               <label htmlFor="title">Titel</label>
               <input
                 id="title"
+                maxLength={21}
                 value={title}
                 onChange={(e) => setTitle(e.target.value)}
               />
@@ -65,7 +67,6 @@ export default function NewNotes() {
               <label htmlFor="name">Namn</label>
               <input
                 id="name"
-                size={10}
                 value={username}
                 onChange={(e) => setUsername(e.target.value)}
               />

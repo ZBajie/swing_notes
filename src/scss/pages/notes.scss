@@ -9,7 +9,7 @@
     justify-content: center;
     align-items: center;
     h2 {
-      font-family: $font-cursive;
+      @include h-primary;
     }
     form {
       div:last-child {
@@ -27,22 +27,27 @@
     flex-wrap: wrap;
     justify-content: center;
     article {
-      width: $note-width;
-      min-height: $note-height;
-      background-color: $background-color-primary;
-
-      padding: $padding-primary;
-      margin: $margin-primary;
-      border: $border-primary;
-      border-radius: 50%;
+      @include article-primary;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       align-items: center;
+
+      h3 {
+        @include h-primary;
+      }
+
       div {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        align-items: center;
+        #note {
+          width: 250px;
+        }
+        margin-top: $margin-primary;
+        margin-bottom: $margin-primary;
+
         button {
           @include button-primary;
           background-color: $background-color-button-secondary;
