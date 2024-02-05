@@ -39,38 +39,44 @@ export default function NewNotes() {
   }
   return (
     <main id="new-note">
-      <h2>Skapa en ny notis</h2>
+      <section>
+        <article>
+          <h2>Skapa en ny notis</h2>
 
-      <form onSubmit={onSubmit}>
-        <div>
-          <label htmlFor="title">Titel</label>
-          <input
-            id="title"
-            value={title}
-            onChange={(e) => setTitle(e.target.value)}
-          />
-        </div>
-        <div>
-          <label htmlFor="note">Notis</label>
-          <textarea
-            id="note"
-            value={note}
-            onChange={(e) => setNote(e.target.value)}
-          />
-        </div>
-        <div>
-          <label htmlFor="name">Namn</label>
-          <input
-            id="name"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
-          />
-        </div>
+          <form onSubmit={onSubmit}>
+            <div>
+              <label htmlFor="title">Titel</label>
+              <input
+                id="title"
+                value={title}
+                onChange={(e) => setTitle(e.target.value)}
+              />
+            </div>
+            <div>
+              <label htmlFor="note">Notis</label>
+              <textarea
+                id="note"
+                rows={6}
+                value={note}
+                onChange={(e) => setNote(e.target.value)}
+              />
+            </div>
+            <div>
+              <label htmlFor="name">Namn</label>
+              <input
+                id="name"
+                size={10}
+                value={username}
+                onChange={(e) => setUsername(e.target.value)}
+              />
+            </div>
 
-        <div>
-          <button onClick={onSubmit}>Posta</button>
-        </div>
-      </form>
+            <div>
+              <button onClick={onSubmit}>Posta</button>
+            </div>
+          </form>
+        </article>
+      </section>
     </main>
   )
 }

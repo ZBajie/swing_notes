@@ -25,6 +25,9 @@
           margin: $margin-primary;
           border: 2px dotted $border-color-primary;
           border-radius: 50%;
+          &:hover {
+            opacity: $opacity-primary;
+          }
         }
       }
     }

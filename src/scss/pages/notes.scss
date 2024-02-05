@@ -1,6 +1,7 @@
 #notes {
   background-color: $background-color-secondary;
   padding: $padding-primary;
+  min-height: 100vh;
 
   header {
     display: flex;
@@ -26,13 +27,13 @@
     flex-wrap: wrap;
     justify-content: center;
     article {
-      width: 420px;
-      min-height: 250px;
+      width: $note-width;
+      min-height: $note-height;
       background-color: $background-color-primary;
 
       padding: $padding-primary;
       margin: $margin-primary;
-      border: 2px dotted $border-color-primary;
+      border: $border-primary;
       border-radius: 50%;
       display: flex;
       flex-direction: column;

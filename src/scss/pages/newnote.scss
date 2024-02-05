@@ -1,0 +1,41 @@
+#new-note {
+  background-color: $background-color-secondary;
+  padding: $padding-primary;
+  min-height: 100vh;
+  section {
+    display: flex;
+    justify-content: center;
+    article {
+      background-color: $background-color-primary;
+      padding: $padding-primary;
+      margin: $margin-primary;
+      border: $border-primary;
+      border-radius: 50%;
+      width: $note-width;
+      min-height: $note-height;
+      h2 {
+        font-family: $font-cursive;
+        text-align: center;
+      }
+      form {
+        text-align: center;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        div {
+          display: flex;
+          flex-direction: column;
+          #note {
+            width: 250px;
+          }
+        }
+        button {
+          @include button-primary;
+          background-color: $background-color-button-secondary;
+        }
+      }
+    }
+  }
+}
