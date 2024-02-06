@@ -8,7 +8,7 @@ function editLink(noteId: string, note: string, username: string) {
 
 async function deleteNote(noteId: string, userName: string) {
   const confirmation: boolean = window.confirm(
-    "Are you sure you want to delete this?"
+    "Är du säker på att du vill radera notisen?"
   )
   if (confirmation) {
     const deleteUrl: string = `https://o6wl0z7avc.execute-api.eu-north-1.amazonaws.com/api/notes/${noteId}`
@@ -87,7 +87,7 @@ const Notes: React.FC = () => {
         </form>
       </header>
       <section>
-        {response.map((item) => (
+        {response.map((item: NotesProps) => (
           <article key={item.id}>
             <h3>{item.title}</h3>
             <div>

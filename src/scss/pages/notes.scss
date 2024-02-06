@@ -52,6 +52,12 @@
           @include button-primary;
           background-color: $background-color-button-secondary;
           border-color: $border-color-secondary;
+          &:hover {
+            animation: button-blink 0.5s linear;
+          }
+          &:active {
+            background-color: black;
+          }
         }
       }
       footer {

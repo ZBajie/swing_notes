@@ -1,0 +1,10 @@
+@keyframes button-blink {
+  0% {
+    background-position: 0% 0%;
+    background-color: red;
+  }
+  100% {
+    background-position: 0% 100%;
+    background-color: blue;
+  }
+}
