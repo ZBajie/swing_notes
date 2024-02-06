@@ -1,6 +1,6 @@
 import { useState } from "react"
 
-export default function EditNote() {
+export default function EditNote(): JSX.Element {
   // Get id from url
   const urlId = new URLSearchParams(window.location.search)
   const noteId = urlId.get("noteId")

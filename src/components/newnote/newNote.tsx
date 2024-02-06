@@ -1,6 +1,6 @@
 import { useState } from "react"
 
-export default function NewNotes() {
+export default function NewNotes(): JSX.Element {
   const [note, setNote] = useState(``)
   const [username, setUsername] = useState(``)
   const [title, setTitle] = useState(``)
@@ -16,7 +16,7 @@ export default function NewNotes() {
     }
 
     try {
-      const response = await fetch(
+      const response: Response = await fetch(
         `https://o6wl0z7avc.execute-api.eu-north-1.amazonaws.com/api/notes`,
         {
           method: "POST",

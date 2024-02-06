@@ -1,4 +1,16 @@
-# React + TypeScript + Vite
+# Swing notes
+
+An examination project for Frontend23 in Borås. JavaScript extended course.
+By Lars
+
+This frontend app can handle persons notes.
+Notes can be created, edited, read and deleted.
+The notes are saved in an database reashed by api.
+The notes are handled by the user name.
+
+The app is made in Vite react and typescript.
+
+## React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
@@ -17,9 +29,9 @@ If you are developing a production application, we recommend updating the config
 export default {
   // other rules...
   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
+    ecmaVersion: "latest",
+    sourceType: "module",
+    project: ["./tsconfig.json", "./tsconfig.node.json"],
     tsconfigRootDir: __dirname,
   },
 }

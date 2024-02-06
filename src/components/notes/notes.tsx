@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { NotesProps } from "../../interfaces"
+import { NotesDataProps, NotesProps } from "../../interfaces"
 
 function editLink(noteId: string, note: string, username: string) {
   const editUrl: string = `/editnote?noteId=${noteId}&note=${note}&username=${username}`
@@ -36,7 +36,7 @@ const Notes: React.FC = () => {
   const [response, setResponse] = useState<NotesProps[]>([])
   const getNotes = async (name: string) => {
     try {
-      const response = await fetch(
+      const response: Response = await fetch(
         `https://o6wl0z7avc.execute-api.eu-north-1.amazonaws.com/api/notes/${name}`,
         {
           method: "GET",
@@ -46,7 +46,7 @@ const Notes: React.FC = () => {
         }
       )
       if (response.ok) {
-        const notesData = await response.json()
+        const notesData: NotesDataProps = await response.json()
         const notes: NotesProps[] = notesData.notes
         setResponse(notes)
       }

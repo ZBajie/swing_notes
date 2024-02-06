@@ -56,7 +56,7 @@
             animation: button-blink 0.5s linear;
           }
           &:active {
-            background-color: black;
+            background-color: $background-color-button-quaternary;
           }
         }
       }

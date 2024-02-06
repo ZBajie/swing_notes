@@ -1,10 +1,10 @@
 @keyframes button-blink {
   0% {
     background-position: 0% 0%;
-    background-color: red;
+    background-color: $background-color-button-tertiary;
   }
   100% {
     background-position: 0% 100%;
-    background-color: blue;
+    background-color: $background-color-button-quaternary;
   }
 }
