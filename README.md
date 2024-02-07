@@ -10,6 +10,8 @@ The notes are handled by the user name.
 
 The app is made in Vite react and typescript.
 
+Simple figma sketch [figma](https://www.figma.com/file/YYF82FXVPndeqGIDyW5mlC/E-postapp?type=design&node-id=0-1&mode=design&t=SGvCzzIonsdB7LO0-0)
+
 ## React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
