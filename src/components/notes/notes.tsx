@@ -33,7 +33,8 @@ const Notes: React.FC = () => {
 
   const userName: string = urlUserName.get("username") || ""
   const [name, setName] = useState(userName)
-  const [response, setResponse] = useState<NotesProps[]>([])
+  const [notes, setResponse] = useState<NotesProps[]>([])
+
   const getNotes = async (name: string) => {
     try {
       const response: Response = await fetch(
@@ -48,6 +49,11 @@ const Notes: React.FC = () => {
       if (response.ok) {
         const notesData: NotesDataProps = await response.json()
         const notes: NotesProps[] = notesData.notes
+        notes.sort(
+          (a, b) =>
+            new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
+        )
+
         setResponse(notes)
       }
     } catch (error) {
@@ -87,7 +93,7 @@ const Notes: React.FC = () => {
         </form>
       </header>
       <section>
-        {response.map((item: NotesProps) => (
+        {notes.map((item: NotesProps) => (
           <article key={item.id}>
             <h3>{item.title}</h3>
             <div>
