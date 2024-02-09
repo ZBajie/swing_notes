@@ -23,7 +23,7 @@
           background-color: $background-color-button-primary;
           padding: $padding-primary;
           margin: $margin-primary;
-          border: 2px dotted $border-color-primary;
+          border: $border-primary;
           border-radius: 50%;
           &:hover {
             opacity: $opacity-primary;

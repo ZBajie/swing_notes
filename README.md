@@ -9,6 +9,7 @@ The notes are saved in an database reashed by api.
 The notes are handled by the user name.
 
 The app is made in Vite react and typescript.
+react-router-dom is installed and used.
 
 Simple figma sketch [figma](https://www.figma.com/file/YYF82FXVPndeqGIDyW5mlC/E-postapp?type=design&node-id=0-1&mode=design&t=SGvCzzIonsdB7LO0-0)
 

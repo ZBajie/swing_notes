@@ -30,8 +30,8 @@ const Notes: React.FC = () => {
   const urlUserName: URLSearchParams = new URLSearchParams(
     window.location.search
   )
-
   const userName: string = urlUserName.get("username") || ""
+
   const [name, setName] = useState(userName)
   const [notes, setResponse] = useState<NotesProps[]>([])
 
